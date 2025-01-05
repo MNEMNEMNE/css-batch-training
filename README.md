@@ -1,4 +1,4 @@
-# CSS batch trainig
+# CSS batch training
 
 Allow to add trainings defined in the csv file for the members of the csstodulky to the web [https://csstodulky.cz](https://csstodulky.cz)
 
