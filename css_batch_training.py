@@ -1,9 +1,8 @@
 import argparse
 import csv
-import pycurl
 import requests
 
-parser = argparse.ArgumentParser(description="Batch insert of training to the CSS internet form from the CSF file")
+parser = argparse.ArgumentParser(description="Batch insertion of trainings to the CSS internet sites form from the CSV file")
 parser.add_argument("uid", help="Define user identifier (see cookies uid parameter)")
 parser.add_argument("key", help="Define user key (see cookies key parameter)")
 parser.add_argument("session", help="Define the session ID of the logged browser (see cookies PHPSESSID variableparameter)")
@@ -25,8 +24,11 @@ with open(args.csv_file_name, 'r') as trainings_file:
             'cas': training['time'],
             'typ': training['type'],
             'km': training['length'],
-#            'pocit': training['rec',
-#            'name': 'rec',
+#            'prum': training['avg'],
+#            't1': training['heardrate_avg'],
+#            't2': training['heardrate_max'],
+#            'pocit': training['feeling'],
+#            'info': training['info'],
         }
 
         cookies = {
