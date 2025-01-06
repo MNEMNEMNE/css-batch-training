@@ -24,12 +24,22 @@ with open(args.csv_file_name, 'r') as trainings_file:
             'cas': training['time'],
             'typ': training['type'],
             'km': training['length'],
-#            'prum': training['avg'],
-#            't1': training['heardrate_avg'],
-#            't2': training['heardrate_max'],
-#            'pocit': training['feeling'],
-#            'info': training['info'],
         }
+
+        if 'avg' in training.keys():
+            data['prum'] = training['avg']
+
+        if 'heardate_avg' in training.keys():
+            data['t1'] = training['heardate_avg']
+
+        if 'heardrate_max' in training.keys():
+            data['t2'] = training['heardrate_max']
+
+        if 'feeling' in training.keys():
+            data['pocit'] = training['feeling']
+
+        if 'info' in training.keys():
+            data['info'] = training['info']
 
         cookies = {
             'uid': args.uid,

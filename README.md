@@ -8,28 +8,53 @@ The first line of the CSV file must contain the labels of the columns.
 At this moments are only the columns `date`, `type`, `time` and `length` supported. 
 See the [trainings_example.csv](trainings_example.csv)
 
+---
+### Mandatory columns
+
 #### [date]
-uses d.m.yyyy format (example `1.1.2025`)
+Uses d.m.yyyy format (example `1.1.2025`)
 
 #### [type]
-ineger value defines the type of sport activity:  
- 1 - road bike  
- 2 - ergo  
- 3 - posilovna  
- 4 - others  
- 5 - swiming  
- 6 - ski  
- 7 - running  
- 8 - MTB  
+Integer value defines the type of sport activity:  
+1 - road bike  
+2 - ergo  
+3 - posilovna  
+4 - others  
+5 - swiming  
+6 - ski  
+7 - running  
+8 - MTB  
 
- #### [time]
- duration of the sport activity uses h:m:s format (example `1:35:47`)
+#### [time]
+Duration of the sport activity uses h:m:s format (example `1:35:47`)
 
- #### [length]
- length of the training in km (example `33,4`)
+#### [length]
+Length of the training in km (example `137,4`)
 
+---
+###  Optional columns
+#### [avg]
+Average speed during the training in km/h (example `33,4`)
 
+#### [heardrate_avg]
+Average heard beat rate in beats/sec (example `137`)
+
+#### [heardrate_max]
+Maximal heard beat rate in beats/sec (example `186`)
+
+#### [feeling]
+Integer value of feeling during the training:  
+1 - Awesome  
+2 - Good  
+3 - Average  
+4 - Poor  
+5 - Very bad  
+
+#### [info]
+Optional text to the training
+
+---
 # TODO
 
 1) check source data for the validity
-2) add  support for other parameters like mut, avrage speed, notes and the heard rate
+2) Get own cookies (login and password as input parameters)
