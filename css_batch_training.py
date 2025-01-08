@@ -1,3 +1,5 @@
+""" Module providing parsing of parameters """
+
 import argparse
 import csv
 import requests
@@ -10,7 +12,7 @@ parser.add_argument("csv_file_name", help="Define file name of the cvs file")
 args = parser.parse_args()
 
 # open the source CSV file with the training data
-with open(args.csv_file_name, 'r') as trainings_file:
+with open(args.csv_file_name, 'r', encoding="utf-8") as trainings_file:
     trainings = csv.DictReader(trainings_file, delimiter=';')
 
     # go through the training file with each workout
@@ -57,4 +59,4 @@ with open(args.csv_file_name, 'r') as trainings_file:
         }
 
         # Send the HTTP post request to add the workout TODO: check whether it was added properly
-        requests.post('https://www.csstodulky.cz/profil/?p=trn', cookies=cookies, data=data)
+        requests.post('https://www.csstodulky.cz/profil/?p=trn', cookies=cookies, data=data, timeout=1)
