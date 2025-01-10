@@ -54,7 +54,4 @@ Integer value of feeling during the training:
 Optional text to the training
 
 ---
-# TODO
-
-1) check source data for the validity
-2) Get own cookies (login and password as input parameters)
+TODO: check input data for validity or print result of each insertion of workout
